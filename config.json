@@ -1,10 +1,10 @@
 {
     "modules":
     {
-        "<pluginName>":
+        "sqaudVA":
         {
             "entry": [
-                "<entry>/index"
+                "SVAMain/index"
             ],
             "active": true,
             "installed": false,
