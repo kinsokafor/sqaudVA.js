@@ -1,10 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import NotFound from '@/components/NotFound.vue'
 import Dashboard from '../views/Dashboard.vue'
+import SimulatePayment from '../views/SimulatePayment.vue';
+import QueryTransaction from '../views/QueryTransaction.vue';
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes: [{
+    routes: [
+        {
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
             component: NotFound,
@@ -15,6 +18,18 @@ const router = createRouter({
             name: 'Dashboard',
             component: Dashboard,
             meta: { title: "Dashboard" }
+        },
+        {
+            path: '/simulate-payment',
+            name: 'SimulatePayment',
+            component: SimulatePayment,
+            meta: { title: "Simulate Payment" }
+        },
+        {
+            path: '/query-transaction',
+            name: 'QueryTransaction',
+            component: QueryTransaction,
+            meta: { title: "Query Transaction" }
         }
     ]
 });
