@@ -36,7 +36,7 @@ const responseData = ref(null);
 
 const fields = computed(() => [
   {
-    label: "Amount",
+    label: "Amount (₦)",
     name: "amount",
     rules: yup
       .number()
@@ -58,7 +58,7 @@ const fields = computed(() => [
 const handleSubmit = (data, actions) => {
   processing.value = true;
   req
-    .post(req.root + "/sqaudva/webhook/simulate-payment", data)
+    .post(req.root + "/sqaudva/simulate-payment", data)
     .then((r) => {
       processing.value = false;
         responseData.value = r.data;
